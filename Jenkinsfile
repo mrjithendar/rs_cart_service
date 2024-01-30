@@ -35,14 +35,12 @@ pipeline {
             }
         }
 
-        stage ('Build Docker Images') {
-            stage ("Build Cart Docker Image") {
-                    steps {
-                        dir("Docker/cart") {
-                            sh "docker build -t roboshop-cart-int ."
-                            sh "docker tag roboshop-cart-int:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/roboshop-cart-int:latest"
-                            sh "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/roboshop-cart-int:latest"
-                    }
+        stage ("Build Cart Docker Image") {
+                steps {
+                    dir("Docker/cart") {
+                        sh "docker build -t roboshop-cart-int ."
+                        sh "docker tag roboshop-cart-int:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/roboshop-cart-int:latest"
+                        sh "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/roboshop-cart-int:latest"
                 }
             }
         }

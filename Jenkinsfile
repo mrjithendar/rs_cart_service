@@ -28,7 +28,7 @@ pipeline {
 
         stage('Check Vars') {
             steps {
-                sh "echo ${env.AWS_ACCOUNT_ID}"
+                sh "echo ${AWS_ACCOUNT_ID}"
             }
         }
 

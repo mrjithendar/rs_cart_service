@@ -42,7 +42,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
         - name: cart
-          image: 826334059644.dkr.ecr.us-east-1.amazonaws.com/roboshop-cart-int:latest
+          image: 826334059644.dkr.ecr.us-east-1.amazonaws.com/roboshop-cart-demo:latest
           ports:
             - containerPort: 8080
           resources:

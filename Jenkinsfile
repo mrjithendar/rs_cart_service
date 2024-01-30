@@ -25,6 +25,7 @@ pipeline {
                     helloWorld('jithendar', 'dharmapuri')
                     aWs()
                 }
+                sh "echo $AWS_ACCOUNT_ID"
             }
         }
 

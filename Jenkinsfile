@@ -21,10 +21,11 @@ pipeline {
 
         stage('Code Checkout') {
             steps {
-                script {
-                  def workingDir = checkoutCode("https://github.com/mrjithendar/ansible.git", "master")
-                  echo $workingDir
-                }
+                sh "echo test"
+                // script {
+                //   def workingDir = checkoutCode("https://github.com/mrjithendar/ansible.git", "master")
+                //   echo $workingDir
+                // }
             }
         }
 

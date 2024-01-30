@@ -10,8 +10,6 @@ pipeline {
         AWSCreds = credentials('awsCreds')
         AWS_ACCESS_KEY_ID = "${AWSCreds_USR}"
         AWS_SECRET_ACCESS_KEY = "${AWSCreds_PSW}"
-        // AWS_DEFAULT_REGION = "us-east-1"
-        // AWS_ACCOUNT_ID = "826334059644"
         vault = credentials('vaultToken')
         tfvars = "vars/${params.Options}.tfvars"
         eks_cluster_name = "roboshop-eks-cluster-int"
@@ -30,7 +28,7 @@ pipeline {
 
         stage('Check Vars') {
             steps {
-                sh "echo ${AWS_ACCOUNT_ID}"
+                sh "echo AWS_ACCOUNT_ID"
             }
         }
 

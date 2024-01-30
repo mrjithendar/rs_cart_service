@@ -22,7 +22,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 script {
-                    helloWorld()
+                    helloWorld(jithendar, dharmapuri)
                 }
             }
         }

@@ -22,7 +22,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 script {
-                    helloWorld('jithendar', 'dharmapuri')
+                    helloWorld('Decode', 'DevOps')
                     aWs()
                 }
                 sh "echo $AWS_ACCOUNT_ID"

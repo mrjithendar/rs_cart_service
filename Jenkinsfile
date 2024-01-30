@@ -20,9 +20,7 @@ pipeline {
         stage('Vars from Shred Library') {
             steps {
                 helloWorld('Decode', 'DevOps')
-                script {
-                    aWs()
-                }
+                aWs()
             }
         }
 

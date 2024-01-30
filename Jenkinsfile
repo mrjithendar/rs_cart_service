@@ -25,7 +25,7 @@ pipeline {
                     helloWorld('Decode', 'DevOps')
                     aWs()
                 }
-                // sh "echo $AWS_ACCOUNT_ID"
+                sh "echo $AWS_ACCOUNT_ID"
             }
         }
 

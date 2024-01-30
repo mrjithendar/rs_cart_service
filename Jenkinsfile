@@ -1,10 +1,11 @@
 @Library("roboshop@master") _
-helloWorld('Decode', 'DevOps')
 
 pipeline {
 
     agent any
 
+    helloWorld('Decode', 'DevOps')
+    
     environment {
         tfDir = "terraform"
         region = "us-east-1"

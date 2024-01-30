@@ -1,4 +1,4 @@
-// @Library("roboshop@master") _
+@Library("roboshop@master") _
 
 pipeline {
 

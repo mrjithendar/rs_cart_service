@@ -19,12 +19,17 @@ pipeline {
 
     stages {
 
-        stage('Code Checkout') {
+        stage('Vars from Shred Library') {
             steps {
                 script {
                     helloWorld('Decode', 'DevOps')
                     aWs()
                 }
+            }
+        }
+
+        stage('Vars from Shred Library') {
+            steps {
                 sh "echo $AWS_ACCOUNT_ID"
             }
         }

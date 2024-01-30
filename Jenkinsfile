@@ -5,6 +5,7 @@ pipeline {
     agent any
 
     environment {
+        helloWorld('Decode', 'DevOps')
         tfDir = "terraform"
         region = "us-east-1"
         AWSCreds = credentials('awsCreds')
@@ -19,7 +20,6 @@ pipeline {
 
         stage('Vars from Shred Library') {
             steps {
-                helloWorld('Decode', 'DevOps')
                 aWs()
             }
         }

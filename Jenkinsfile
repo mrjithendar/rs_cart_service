@@ -13,7 +13,7 @@ pipeline {
         vault = credentials('vaultToken')
         tfvars = "vars/${params.Options}.tfvars"
         eks_cluster_name = "dkode-eks-cluster-demo"
-        service = "cart-demo"
+        service = "cart_demo"
     }
 
     stages {

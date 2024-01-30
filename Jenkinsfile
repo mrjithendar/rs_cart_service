@@ -1,4 +1,5 @@
 @Library("roboshop@master") _
+helloWorld('Decode', 'DevOps')
 
 pipeline {
 
@@ -20,7 +21,6 @@ pipeline {
         stage('Vars from Shred Library') {
             steps {
                 script {
-                    helloWorld('Decode', 'DevOps')
                     aWs()
                 }
             }

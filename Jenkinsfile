@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('Vars from Shred Library') {
+        stage('Check Vars') {
             steps {
                 sh "echo $AWS_ACCOUNT_ID"
             }

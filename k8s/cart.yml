@@ -7,7 +7,7 @@ metadata:
     app: cart
     purpose: roboshop
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: cart
@@ -42,16 +42,16 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
         - name: cart
-          image: 826334059644.dkr.ecr.us-east-1.amazonaws.com/roboshop-cart-demo:latest
+          image: 826334059644.dkr.ecr.us-east-1.amazonaws.com/cart_demo:latest
           ports:
             - containerPort: 8080
           resources:
-            requests:
-              cpu: 500m
-              memory: 100Mi
             limits:
-              cpu: 1
-              memory: 200Mi
+              cpu: 200m
+              memory: 100Mi
+            requests:
+              cpu: 100m
+              memory: 50Mi
           env:
             - name: REDIS_HOST
               value: "redis"

@@ -368,7 +368,8 @@ function saveCart(id, cart) {
 var redisHost = process.env.REDIS_HOST || 'redis'
 
 var redisClient = redis.createClient({
-    host: redisHost
+    host: redisHost,
+    PORT: 6379
 });
 
 redisClient.on('error', (e) => {

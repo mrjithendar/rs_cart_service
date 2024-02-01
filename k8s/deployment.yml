@@ -55,7 +55,7 @@ spec:
           env:
             - name: REDIS_HOST
               value: "redis"
-            - name: CATALOGUE_HOST
+            - name: redis.roboshop.com
               value: "catalogue"
             - name: CATALOGUE_PORT
               value: "8080"

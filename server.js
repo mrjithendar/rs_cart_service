@@ -17,7 +17,6 @@ const counter = new promClient.Counter({
 
 var redisConnected = false;
 
-var redisHost = process.env.REDIS_HOST || 'redis'
 var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
 var cataloguePort = process.env.CATALOGUE_PORT || '8080'
 
@@ -366,9 +365,10 @@ function saveCart(id, cart) {
 }
 
 // connect to Redis
+var redisHost = process.env.REDIS_HOST || 'redis'
+
 var redisClient = redis.createClient({
-    host: redisHost,
-    PORT: 6379
+    host: redisHost
 });
 
 redisClient.on('error', (e) => {

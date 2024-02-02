@@ -54,7 +54,7 @@ spec:
               memory: 50Mi
           env:
             - name: REDIS_HOST
-              value: redis
+              value: redis.roboshop.com
             - name: CATALOGUE_HOST
               value: catalogue
             - name: CATALOGUE_PORT
